@@ -6,8 +6,8 @@ echo "=== https://github.com/azadrahorg ==="
 echo "=== MikroTik 7 Installer ==="
 echo
 sleep 3
-wget https://github.com/loskiq/MikroTikPatch/releases/download/7.17/chr-7.17-arm64-patched.img.zip  && \
-gunzip -c chr-7.17-arm64-patched.img.zip > chr.img  && \
+wget https://github.com/loskiq/MikroTikPatch/releases/download/7.17/chr-7.17-patched.img.zip  && \
+gunzip -c chr-7.17-patched.img.zip > chr.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
 echo STORAGE is $STORAGE && \
 ETH=`ip route show default | sed -n 's/.* dev \([^\ ]*\) .*/\1/p'` && \
